@@ -1,9 +1,8 @@
 package com.nana.pathologyservicems.Models;
 
 
-import org.springframework.stereotype.Service;
 
-@Service
+
 public class Disease {
     private String Id;
     private String description;

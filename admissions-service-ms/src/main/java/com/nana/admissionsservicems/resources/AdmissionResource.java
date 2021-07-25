@@ -24,6 +24,7 @@ public class AdmissionResource {
     public List<Patient> getPatients(){
         return  patients;
     }
+
     @RequestMapping("/patients/{id}")
     public Patient getPatientById(@PathVariable("Id") String Id){
         Patient p= patients.stream()
