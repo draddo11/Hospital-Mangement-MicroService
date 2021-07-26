@@ -24,6 +24,11 @@ public class AdmissionResource {
             new Patient("P3" , "Greg" , "Spanish")
     );
 
+    public EmployeesList getPhysicians(){
+EmployeesList employeesList =
+        restTemplate.getForObject("http://localhost:8082/hr/employees/", EmployeesList.Class )
+        return employeesList;
+    }
 
     @RequestMapping("/patients")
     public List<Patient> getPatients(){

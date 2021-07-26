@@ -22,8 +22,13 @@ public class HrResources {
 
 
     @RequestMapping("/employees")
-    public List<Employee> getEmployees(){
-        return employees;
+//    public List<Employee> getEmployees()
+//    old format was changed to make request from other servoces
+
+    public EmployeesList getEmployees(){
+        EmployeesList employeesList = new EmployeesList();
+        employeesList.setEmployees(employees);
+        return employeesList;
     }
 
     @RequestMapping("/employees/{Id}")
