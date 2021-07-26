@@ -2,9 +2,11 @@ package com.nana.admissionsservicems.resources;
 
 
 import com.nana.admissionsservicems.models.Patient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +14,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/admissions")
 public class AdmissionResource {
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     List<Patient> patients= Arrays.asList(
             new Patient("P1" ,"Chris" ,"American"),
