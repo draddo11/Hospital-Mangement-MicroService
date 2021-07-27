@@ -2,6 +2,7 @@ package com.nana.pathologyservicems.Resources;
 
 
 import com.nana.pathologyservicems.Models.Disease;
+import com.nana.pathologyservicems.Models.DiseasesList;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,8 +22,11 @@ public class PathologyResource {
     );
 
     @RequestMapping("/diseases")
-    public List<Disease> getDiseases(){
-        return  diseases;
+    public DiseasesList getDiseases(){
+
+        DiseasesList diseaseslist= new DiseasesList();
+        diseaseslist.setDiseases(diseases);
+        return  diseaseslist;
     }
 
     @RequestMapping("/diseases/{Id}")

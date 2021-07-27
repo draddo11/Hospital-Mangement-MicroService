@@ -1,6 +1,7 @@
 package com.nana.admissionsservicems.resources;
 
 
+import com.nana.admissionsservicems.models.DiseasesList;
 import com.nana.admissionsservicems.models.Patient;
 import com.nana.hrservice.Models.EmployeesList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,15 @@ EmployeesList employeesList =
         restTemplate.getForObject("http://localhost:8082/hr/employees/", EmployeesList.class);
         return employeesList;
     }
+
+
+    @RequestMapping("/diseases")
+    public DiseasesList getDiseases(){
+        DiseasesList diseasesList =
+                restTemplate.getForObject("http://localhost:8083/pathology/diseases/", DiseasesList.class);
+        return diseasesList;
+    }
+
 
     @RequestMapping("/patients")
     public List<Patient> getPatients(){
