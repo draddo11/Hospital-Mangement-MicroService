@@ -2,6 +2,7 @@ package com.nana.hrservice.resources;
 
 
 import com.nana.hrservice.Models.Employee;
+import com.nana.hrservice.Models.EmployeesList;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ public class HrResources {
 
     @RequestMapping("/employees")
 //    public List<Employee> getEmployees()
-//    old format was changed to make request from other servoces
+//    old format was changed to make request from other services
 
     public EmployeesList getEmployees(){
         EmployeesList employeesList = new EmployeesList();

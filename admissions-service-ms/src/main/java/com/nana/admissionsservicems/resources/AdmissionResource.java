@@ -2,6 +2,7 @@ package com.nana.admissionsservicems.resources;
 
 
 import com.nana.admissionsservicems.models.Patient;
+import com.nana.hrservice.Models.EmployeesList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,9 +25,10 @@ public class AdmissionResource {
             new Patient("P3" , "Greg" , "Spanish")
     );
 
+    @RequestMapping("/physicians")
     public EmployeesList getPhysicians(){
 EmployeesList employeesList =
-        restTemplate.getForObject("http://localhost:8082/hr/employees/", EmployeesList.Class )
+        restTemplate.getForObject("http://localhost:8082/hr/employees/", EmployeesList.class);
         return employeesList;
     }
 
