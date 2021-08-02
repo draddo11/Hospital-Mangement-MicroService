@@ -29,7 +29,7 @@ public class AdmissionResource {
     @RequestMapping("/physicians")
     public EmployeesList getPhysicians(){
 EmployeesList employeesList =
-        restTemplate.getForObject("http://localhost:8082/hr/employees/", EmployeesList.class);
+        restTemplate.getForObject("http://hr-service-ms/hr/employees/", EmployeesList.class);
         return employeesList;
     }
 
@@ -37,7 +37,7 @@ EmployeesList employeesList =
     @RequestMapping("/diseases")
     public DiseasesList getDiseases(){
         DiseasesList diseasesList =
-                restTemplate.getForObject("http://localhost:8083/pathology/diseases/", DiseasesList.class);
+                restTemplate.getForObject("http://pathology-service-ms/pathology/diseases/", DiseasesList.class);
         return diseasesList;
     }
 
