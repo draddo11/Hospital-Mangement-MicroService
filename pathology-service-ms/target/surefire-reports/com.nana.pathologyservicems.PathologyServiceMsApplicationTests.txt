@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.nana.pathologyservicems.PathologyServiceMsApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.749 s - in com.nana.pathologyservicems.PathologyServiceMsApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.892 s <<< FAILURE! - in com.nana.pathologyservicems.PathologyServiceMsApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate interface org.springframework.boot.Bootstrapper : org.springframework.cloud.netflix.eureka.config.EurekaConfigServerBootstrapper
+Caused by: java.lang.NoClassDefFoundError: com/netflix/discovery/shared/resolver/EurekaEndpoint
+Caused by: java.lang.ClassNotFoundException: com.netflix.discovery.shared.resolver.EurekaEndpoint
+

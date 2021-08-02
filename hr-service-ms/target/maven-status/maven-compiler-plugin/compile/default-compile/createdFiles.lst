@@ -1,1 +1,4 @@
+com\nana\hrservice\Models\Employee.class
+com\nana\hrservice\Models\EmployeesList.class
+com\nana\hrservice\resources\HrResources.class
 com\nana\hrservice\HrServiceApplication.class
